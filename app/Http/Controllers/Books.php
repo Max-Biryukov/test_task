@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use \App\Models\Book;
+use \App\Models\Tag;
 
 class Books extends Controller
 {
     public function getIndex()
     {
     	return view( 'books.list', [
-    		'books' => Book::select([ 'name', 'url' ])->get()
+    		'books' => Book::select([ 'id', 'name', 'url' ])->get(),
+    		'tags' => Tag::select([ 'id', 'name' ])->orderBy( 'name' )->get(),
     	]);
     }
 

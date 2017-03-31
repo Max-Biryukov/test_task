@@ -10,8 +10,15 @@
 @endif
 <div>
     <p>Теги:</p>
+    <ul>
+		@forelse( $book->tags as $tag )
+			<li><a href="">{{ $tag->name }}</a></li>
+		@empty
+			<li>Теги отсутствуют</li>
+		@endforelse
+	</ul>
 </div>
 <div>
-    <a href="/">К списку книг</a>
+    <p><a href="/">К списку книг</a></p>
 </div>
 @endsection
