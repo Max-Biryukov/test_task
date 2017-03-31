@@ -42,4 +42,10 @@ class Baskets extends Controller
 
         return redirect()->back()->with( 'warning', 'При добавлении в корзину произошла ошибка' );
     }
+
+    public function getIndex()
+    {
+	   	return view( 'basket.index', []);
+    }
+
 }

@@ -7,7 +7,7 @@
     <body>
         @if( \Auth::check() )
             <div style="text-align:right">
-                <a href="">Корзина</a>
+                <a href="/basket">Корзина</a>
                 <a href="/logout">Выйти</a>
             </div>
         @endif

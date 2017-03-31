@@ -27,6 +27,7 @@ class User extends Authenticatable
 
     public function basket()
     {
+        return $this->hasManyThrough( \App\Models\Book::class, \App\Models\Basket::class, 'user_id', 'id' );
     	return $this->hasMany( \App\Models\Basket::class );
     }
 
