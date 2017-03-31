@@ -1,4 +1,4 @@
-@extends( 'layout' )
+@extends( 'layouts.main' )
 @section( 'content' )
 <h1 style="text-align:center">Книги по тегу "{{ $tag->name }}"</h1>
 

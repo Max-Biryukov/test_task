@@ -1,10 +1,10 @@
-@extends( 'layout' )
+@extends( 'layouts.main' )
 @section( 'content' )
 <h1 style="text-align:center">Книга "{{ $book->name }}"</h1>
 <img src="/images/{{ $book->picture }}" />
 <p style="text-align:justify">{{ $book->description }}</p>
 @if( $book->on_offer )
-    <a href="">Купить</a>
+    <a href="/basket/add/{{ $book->id }}">Купить</a>
 @else
     <a href="">Подписаться</a>
 @endif

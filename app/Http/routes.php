@@ -16,4 +16,14 @@ Route::get('/', function () {
 });*/
 
 
-Route::controller( '/', "Books");
+// Маршруты аутентификации...
+
+$this->get('login', 'Auth\AuthController@showLoginForm');
+$this->post('login', 'Auth\AuthController@login');
+$this->get('logout', 'Auth\AuthController@logout');
+
+//Корзина
+Route::controller( '/basket', 'Baskets' );
+
+//Работа с книгами
+Route::controller( '/', 'Books');
