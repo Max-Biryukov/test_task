@@ -12,8 +12,10 @@ class CreateBasketsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Basket', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('Baskets', function (Blueprint $table) {
+            $table->increments( 'id' );
+            $table->biginteger( 'user_id' );
+            $table->biginteger( 'book_id' );
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ class CreateBasketsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Basket');
+        Schema::drop('Baskets');
     }
 }

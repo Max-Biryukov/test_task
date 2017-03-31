@@ -11,6 +11,15 @@
                 <a href="/logout">Выйти</a>
             </div>
         @endif
+
+        @if( $warning = \Session::get('warning') )
+            <div style="color: #900; font-weight:bold">{{ $warning }}</div>
+        @endif
+
+        @if( $message = \Session::get('message') )
+            <div style="color: #090; font-weight:bold">{{ $message }}</div>
+        @endif
+
         @yield( 'content' )
     </body>
 </html>
