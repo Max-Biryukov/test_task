@@ -2,19 +2,24 @@
 @section( 'content' )
 <div>Корзина:</div>
 
+
+
 <div>
     <ul>
 		@forelse( \Auth::user()->basket as $book )
-  {{ dd( $book ) }}
 			<li>
 			    <a href="/detail/{{ $book->url }}">{{ $book->name }}</a>
 			    <p>{{ $book->subhead }}</p>
+                <p><a href="/basket/remove/{{ $book->id }}">Удалить из корзины</a></p>
 			</li>
 		@empty
-			<li>Список книг пока еще не загружен</li>
+			<li>Ваша корзина пуста. Перейдите в <a href="/">каталог</a></li>
 		@endforelse
     </ul>
 </div>
 
+<div>
+    <p><a href="/">К списку книг</a></p>
+</div>
 
 @endsection

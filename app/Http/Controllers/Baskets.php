@@ -43,6 +43,17 @@ class Baskets extends Controller
         return redirect()->back()->with( 'warning', 'При добавлении в корзину произошла ошибка' );
     }
 
+    public function getRemove( $id )
+    {
+        $user = \Auth::user();
+        if( empty($id) || !$basket_element = Basket::whereBookId( (int)$id )->whereUserId( $user->id )->first()->delete() ){
+            abort( 404 );
+        }
+
+        return redirect()->back()->with( 'message', 'Книга удалена из корзины' );
+
+    }    
+    
     public function getIndex()
     {
 	   	return view( 'basket.index', []);
