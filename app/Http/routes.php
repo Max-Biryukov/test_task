@@ -22,6 +22,9 @@ $this->get('login', 'Auth\AuthController@showLoginForm');
 $this->post('login', 'Auth\AuthController@login');
 $this->get('logout', 'Auth\AuthController@logout');
 
+//Список пожеланий
+Route::controller( '/wish-list', 'WishLists' );
+
 //Корзина
 Route::controller( '/basket', 'Baskets' );
 

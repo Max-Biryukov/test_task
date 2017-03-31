@@ -7,6 +7,7 @@
     <body>
         @if( \Auth::check() )
             <div style="text-align:right">
+                <a href="/wish-list">Список пожеланий</a>
                 <a href="/basket">Корзина</a>
                 <a href="/logout">Выйти</a>
             </div>

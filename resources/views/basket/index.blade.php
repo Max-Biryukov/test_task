@@ -2,8 +2,6 @@
 @section( 'content' )
 <div>Корзина:</div>
 
-
-
 <div>
     <ul>
 		@forelse( \Auth::user()->basket as $book )

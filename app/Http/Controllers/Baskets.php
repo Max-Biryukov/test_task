@@ -46,10 +46,11 @@ class Baskets extends Controller
     public function getRemove( $id )
     {
         $user = \Auth::user();
-        if( empty($id) || !$basket_element = Basket::whereBookId( (int)$id )->whereUserId( $user->id )->first()->delete() ){
+        if( empty($id) || !$basket_element = Basket::whereBookId( (int)$id )->whereUserId( $user->id )->first() ){
             abort( 404 );
         }
-
+        
+        $basket_element->delete();
         return redirect()->back()->with( 'message', 'Книга удалена из корзины' );
 
     }    

@@ -6,7 +6,7 @@
 @if( $book->on_offer )
     <a href="/basket/add/{{ $book->id }}">Купить</a>
 @else
-    <a href="">Подписаться</a>
+    <a href="/wish-list/add/{{ $book->id }}">Подписаться</a>
 @endif
 <div>
     <p>Теги:</p>

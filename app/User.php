@@ -30,4 +30,9 @@ class User extends Authenticatable
         return $this->belongsToMany( \App\Models\Book::class, 'baskets', 'user_id', 'book_id' );
     }
 
+    public function wish_list()
+    {
+        return $this->belongsToMany( \App\Models\Book::class, 'wish_lists', 'user_id', 'book_id' );
+    }    
+    
 }
