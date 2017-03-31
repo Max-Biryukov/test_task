@@ -43,14 +43,14 @@ class CreateTagsTable extends Migration
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '3', '3' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '3', '5' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '3', '6' )");
-		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '3', '5' )");
+		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '3', '7' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '4', '5' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '4', '1' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '4', '4' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '4', '2' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '5', '5' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '5', '3' )");
-		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '5', '3' )");
+		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '5', '1' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '5', '8' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '6', '5' )");
 		\DB::statement( "INSERT INTO `book_tag` (`book_id`, `tag_id`) VALUES ( '7', '5' )");

@@ -13,7 +13,7 @@ class Books extends Controller
     public function getIndex()
     {
     	return view( 'books.list', [
-    		'books' => Book::select([ 'id', 'name', 'url' ])->get(),
+    		'books' => Book::select([ 'id', 'name', 'url', 'subhead' ])->get(),
     		'tags' => Tag::select([ 'id', 'name' ])->orderBy( 'name' )->get(),
     	]);
     }
@@ -26,6 +26,18 @@ class Books extends Controller
 
     	return view( 'books.detail', [
     		'book' => $book
+    	]);
+    }
+
+    public function getByTag( $id )
+    {
+
+        if( empty($id) || !$tag = Tag::with( 'books' )->whereId( (int)$id )->first() ){
+        	abort( 404 );
+        }
+
+    	return view( 'books.byTags', [
+    	    'tag' => $tag,
     	]);
     }
 
